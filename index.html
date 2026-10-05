@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>💰 Student Expense Tracker</h1>
+            <p>Track your spending and manage your money easily.</p>
+        </header>
+
+        <!-- Summary -->
+        <section class="summary">
+            <div class="summary-card">
+                <span>Total Expenses</span>
+                <h2 id="totalAmount">₹0</h2>
+            </div>
+
+            <div class="summary-card">
+                <span>Total Transactions</span>
+                <h2 id="totalTransactions">0</h2>
+            </div>
+        </section>
+
+        <!-- Add Expense -->
+        <section class="expense-form">
+            <h2>Add Expense</h2>
+
+            <form id="expenseForm">
+
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="Expense title"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="amount"
+                    placeholder="Amount"
+                    min="1"
+                    required
+                >
+
+                <select id="category" required>
+                    <option value="">Select Category</option>
+                    <option value="Food">🍔 Food</option>
+                    <option value="Travel">🚌 Travel</option>
+                    <option value="Shopping">🛍️ Shopping</option>
+                    <option value="Education">📚 Education</option>
+                    <option value="Entertainment">🎮 Entertainment</option>
+                    <option value="Other">📦 Other</option>
+                </select>
+
+                <input
+                    type="date"
+                    id="date"
+                    required
+                >
+
+                <button type="submit">+ Add Expense</button>
+
+            </form>
+        </section>
+
+        <!-- Expenses -->
+        <section class="expenses-section">
+            <div class="section-heading">
+                <h2>Your Expenses</h2>
+
+                <button id="clearAll" class="clear-btn">
+                    Clear All
+                </button>
+            </div>
+
+            <div id="expenseList" class="expense-list">
+                <!-- Expenses will appear here -->
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
